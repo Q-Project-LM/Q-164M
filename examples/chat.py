@@ -10,11 +10,10 @@ from transformers import AutoModelForCausalLM, AutoTokenizer
 sys.path.insert(0, ".")
 from model.circuits_qagent import USER, MODEL, EOT, CircuitLogitsProcessor
 
-MODEL_ID = "q-project/Q-164M"
-SUBFOLDER = "instruct"  # the chat-SFT + RL fine-tune; drop this arg to load the base pretrain model instead
+MODEL_ID = "q-project/Q-U-164M"  # the chat-SFT + RL fine-tune; use "q-project/Q-164M" for the base pretrain model
 
-tok = AutoTokenizer.from_pretrained(MODEL_ID, subfolder=SUBFOLDER)
-model = AutoModelForCausalLM.from_pretrained(MODEL_ID, subfolder=SUBFOLDER, trust_remote_code=True)
+tok = AutoTokenizer.from_pretrained(MODEL_ID)
+model = AutoModelForCausalLM.from_pretrained(MODEL_ID, trust_remote_code=True)
 model = model.cuda().eval() if torch.cuda.is_available() else model.eval()
 device = next(model.parameters()).device
 

@@ -5,7 +5,7 @@ gap is what caused several real bugs across earlier fine-tune passes; see the bl
 A low loss or a good RL reward is not proof a model actually works -- always check generation directly.
 
 usage:
-  python examples/verify.py                              # loads q-project/Q-164M, instruct/ subfolder
+  python examples/verify.py                              # loads q-project/Q-U-164M
   python examples/verify.py --ckpt runs/qu164m_rl/final.pt  # or a local checkpoint from finetune/
 """
 import argparse
@@ -52,9 +52,8 @@ def load(ckpt_path):
         print(f"loaded {ckpt_path} (step {ck.get('step')})")
     else:
         from transformers import AutoModelForCausalLM
-        model = AutoModelForCausalLM.from_pretrained("q-project/Q-164M", subfolder="instruct",
-                                                       trust_remote_code=True)
-        print("loaded q-project/Q-164M (instruct/)")
+        model = AutoModelForCausalLM.from_pretrained("q-project/Q-U-164M", trust_remote_code=True)
+        print("loaded q-project/Q-U-164M")
     device = "cuda" if torch.cuda.is_available() else "cpu"
     return model.to(device).eval(), tok, device
 

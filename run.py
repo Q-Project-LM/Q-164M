@@ -25,8 +25,8 @@ def load(instruct, ckpt_path):
         model.load_state_dict(ck["model"], strict=False)
     else:
         from transformers import AutoModelForCausalLM
-        kw = {"subfolder": "instruct"} if instruct else {}
-        model = AutoModelForCausalLM.from_pretrained("q-project/Q-164M", trust_remote_code=True, **kw)
+        repo_id = "q-project/Q-U-164M" if instruct else "q-project/Q-164M"
+        model = AutoModelForCausalLM.from_pretrained(repo_id, trust_remote_code=True)
     device = "cuda" if torch.cuda.is_available() else "cpu"
     return model.to(device).eval(), tok, device
 

@@ -5,7 +5,8 @@
 
   <p>
     <a href="LICENSE"><img src="https://img.shields.io/badge/License-Apache%202.0-green?style=for-the-badge" alt="License"></a>
-    <a href="https://huggingface.co/q-project/Q-164M"><img src="https://img.shields.io/badge/%F0%9F%A4%97%20Weights-Hugging%20Face-yellow?style=for-the-badge" alt="Hugging Face"></a>
+    <a href="https://huggingface.co/q-project/Q-164M"><img src="https://img.shields.io/badge/%F0%9F%A4%97%20Q--164M-Hugging%20Face-yellow?style=for-the-badge" alt="Q-164M on Hugging Face"></a>
+    <a href="https://huggingface.co/q-project/Q-U-164M"><img src="https://img.shields.io/badge/%F0%9F%A4%97%20Q--U--164M-Hugging%20Face-yellow?style=for-the-badge" alt="Q-U-164M on Hugging Face"></a>
     <a href="https://q-project-lm.github.io/blog-q164m.html"><img src="https://img.shields.io/badge/Blog-How%20it%20works-2F6FD0?style=for-the-badge" alt="Blog"></a>
   </p>
 </div>
@@ -19,8 +20,10 @@
 ## What's here, what isn't
 
 This repo has the **fine-tuning recipe and inference code** for Q-164M / Q-U-164M — not the pretrain
-pipeline (that stays internal) and not the weights (those are on the [Hub](https://huggingface.co/q-project/Q-164M),
-where `trust_remote_code=True` pulls in the small architecture files below automatically).
+pipeline (that stays internal) and not the weights. Weights are two separate Hub repos, each self-contained
+(own weights, own architecture code via `trust_remote_code=True`, own `model.qpack`):
+[q-project/Q-164M](https://huggingface.co/q-project/Q-164M) (base pretrain) and
+[q-project/Q-U-164M](https://huggingface.co/q-project/Q-U-164M) (chat-SFT + RL fine-tune).
 
 ```
 model/          the architecture reference: modeling_qagent.py, configuration_qagent.py, circuits_qagent.py
