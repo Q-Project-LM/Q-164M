@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="4125" height="4125" viewBox="0 0 4125 4125" role="img" aria-labelledby="title desc">
+  <title id="title">Q-Project refined ribbon mark v3</title>
+  <desc id="desc">The original dimensional Q construction, refined with calmer facets and a shorter broad ribbon terminal.</desc>
+  <defs>
+    <linearGradient id="surface-v3" x1="0" y1="0" x2="1" y2="1">
+      <stop stop-color="#5277DF"/>
+      <stop offset="0.55" stop-color="#438DE9"/>
+      <stop offset="1" stop-color="#35B7E4"/>
+    </linearGradient>
+    <linearGradient id="left-v3" x1="690" y1="1160" x2="990" y2="3010" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#39AFE0"/>
+      <stop offset="1" stop-color="#376BD1"/>
+    </linearGradient>
+  </defs>
+
+  <path fill="#385FCA" d="M3431.55,2739.45l-383.58-233.89c-37.25-22.71-59.97-63.18-59.97-106.81v-971.89c0-53.3-27.86-102.73-73.47-130.33l-797.31-482.45c-43.85-26.53-98.74-26.79-142.84-.67l-775.81,459.56c-58.57,34.7-94.35,97.85-94,165.93l4.9,956.05c.33,64.63,41.23,118.59,96.53,152.04l1318.07,807.43c19.97,12.08,19.97,41.06,0,53.14l-308.56,186.57c-100.39,60.7-226.29,60.15-326.14-1.43l-1189.9-733.77c-54.39-33.54-87.6-92.8-87.82-156.71l-5.19-1525.39c-.29-84.18,50.76-162.44,107.54-213.84L1878,285c105.27-63.87,237.07-64.92,343.34-2.74l1135.81,659.36c79.76,46.66,128.65,132.25,128.33,224.66l-5.29,1545.97c-.09,24.92-27.37,40.18-48.65,27.21Z"/>
+  <path fill="url(#left-v3)" d="M671.21,1125.4l401.39,237.67c8.3,4.92,7.44,10.29,7.4,19.94l-5.77,1627.78c-.08,21.28-17.5,37.81-35.59,26.61l-336.64-208.4c-42.3-29.32-67.53-77.52-67.53-128.99l-4.34-1551.12c-.06-21.11,22.91-34.25,41.07-23.49Z"/>
+  <path fill="url(#surface-v3)" d="M3426,1077l-396.75,260.25c-38.25,27-2.25-4.5-77.25-50.25l-870.43-516.87c-18.3-10.85-30.39-47.72-11.57-57.63l313.5-277.5c46.72-21.58,188.14,74.4,232.5,100.5l766.5,444c56.25,47.25,54,85.5,43.5,97.5Z"/>
+
+  <!-- Compact Q ribbon, kept on one clean plane with no offset outline. -->
+  <path fill="url(#surface-v3)" d="M2336 2907Q2292 2878 2328 2851L2708 2569Q2744 2542 2788 2571L3252 2872Q3296 2901 3260 2928L2880 3210Q2844 3237 2800 3208Z"/>
+</svg>

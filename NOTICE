@@ -1,0 +1,11 @@
+Q-164M / Q-U-164M
+Copyright 2026 Q Project
+
+This repository's code is licensed under the Apache License, Version 2.0 (see LICENSE).
+
+Third-party data used by the fine-tuning recipe in finetune/ and data/ keeps its own license and terms —
+check before commercial use:
+
+- FineWeb / FineWeb-Edu and the SmolLM corpus (HuggingFaceFW / HuggingFaceTB) — ODC-By 1.0 / Apache-2.0
+- GSM8K (openai/gsm8k) — MIT
+- SmolTalk's everyday-conversations subset (HuggingFaceTB/smoltalk) — Apache-2.0
